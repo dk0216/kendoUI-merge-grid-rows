@@ -14,6 +14,8 @@ import { sampleProducts } from './products';
   selector: 'my-app',
   template: `
         <kendo-grid [data]="gridData">
+            <kendo-grid-column field="SupplierID">
+            </kendo-grid-column>
             <kendo-grid-column field="ProductName">
                 <ng-template kendoGridCellTemplate let-dataItem let-rowIndex="rowIndex">
                     Row: {{rowIndex}} /
@@ -24,6 +26,8 @@ import { sampleProducts } from './products';
               <ng-template kendoGridCellTemplate let-dataItem>
                   <span #cell></span>
               </ng-template>
+            </kendo-grid-column>
+            <kendo-grid-column field="FirstOrderedOn">
             </kendo-grid-column>
         </kendo-grid>
     `,
